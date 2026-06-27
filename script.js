@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 'auto',
         centeredSlides: true,
         loop: true,
-        speed: 3000,
+        speed: 600,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
