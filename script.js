@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 'auto',
         centeredSlides: true,
         loop: true,
-        speed: 600,
+        speed: 3000, // autoplay scroll speed (3 seconds per slide)
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
@@ -23,10 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
             0: { spaceBetween: 20 },
             768: { spaceBetween: 30 },
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        // NOTE: `navigation` is removed – we handle clicks manually below
     });
 
     // Pause on hover
@@ -37,6 +34,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         swiperContainer.addEventListener('mouseleave', () => {
             horizontalSwiper.autoplay.start();
+        });
+    }
+
+    // ===== CUSTOM FAST NAVIGATION BUTTONS =====
+    const nextBtn = document.querySelector('.swiper-button-next');
+    const prevBtn = document.querySelector('.swiper-button-prev');
+
+    if (nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            horizontalSwiper.slideNext(600); // fast slide (600ms)
+        });
+
+        prevBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            horizontalSwiper.slidePrev(600); // fast slide (600ms)
         });
     }
 
@@ -145,4 +158,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
