@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 'auto',
         centeredSlides: true,
         loop: true,
-        speed: 3000, // autoplay scroll speed (3 seconds per slide)
+        speed: 5000, // autoplay scroll speed (3 seconds per slide)
         autoplay: {
-            delay: 0,
+            delay: 2000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
             reverseDirection: false, // left-to-right
