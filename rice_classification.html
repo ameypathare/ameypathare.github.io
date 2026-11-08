@@ -265,7 +265,7 @@
 <body>
     <!-- Back button to return to index.html#projects -->
     <div class="back-button">
-        <a href="/#projects-7" onclick="event.preventDefault(); window.location.replace('/#projects-7');" title="Back to projects">
+        <a href="/#projects-7" onclick="event.preventDefault(); goBackToPortfolio(7);" title="Back to projects">
             <i class="fas fa-arrow-left"></i>
         </a>
     </div>
@@ -400,5 +400,20 @@
             <p>©2026 Amey's portfolio. All rights reserved.<br>Made by Amey Pathare</p>
         </div>
     </footer>
+
+    <script>
+    function goBackToPortfolio(projectIndex) {
+      if (window.history.length > 1) {
+        let navigated = false;
+        window.addEventListener('pagehide', () => { navigated = true; }, { once: true });
+        window.history.back();
+        setTimeout(() => {
+          if (!navigated) window.location.href = '/#projects-' + projectIndex;
+        }, 300);
+      } else {
+        window.location.href = '/#projects-' + projectIndex;
+      }
+    }
+    </script>    
 </body>
 </html>
