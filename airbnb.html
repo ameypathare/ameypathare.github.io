@@ -20,7 +20,7 @@
 
         body {
             font-family: 'DM Sans', 'Inter', sans-serif;
-            background: #fffcf2; /* CREAM BACKGROUND */
+            background: #F5F5F5;
             color: #1A1A1A;
             line-height: 1.5;
         }
@@ -45,9 +45,9 @@
             justify-content: center;
             width: 50px;
             height: 50px;
-            background: white; /* KEPT WHITE */
+            background: white;
             border-radius: 50%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* KEPT SHADOW */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             color: #1A1A1A;
             font-size: 1.5rem;
             transition: all 0.3s ease;
@@ -63,7 +63,7 @@
         /* Property Hero */
         .property-hero {
             padding: 80px 0 20px;
-            background: transparent; /* ALLOWS CREAM TO SHOW */
+            background: rgb(255, 255, 255);
         }
 
         .property-title {
@@ -80,7 +80,7 @@
 
         /* Main Image */
         .image-section {
-            background: transparent; /* ALLOWS CREAM TO SHOW */
+            background: white;
             padding: 0 0 40px;
         }
 
@@ -94,7 +94,7 @@
         /* Project Details Section */
         .project-details {
             padding: 60px 0;
-            background: transparent; /* ALLOWS CREAM TO SHOW */
+            background: white;
         }
 
         .project-details h2 {
@@ -142,7 +142,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* KEPT SHADOW */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .dashboard-link {
@@ -185,13 +185,12 @@
 
         .main-image img {
             width: 100%;
-            max-width: 800px;    
-            height: 400px;       
-            object-fit: cover;   
+            max-width: 800px;    /* optional limit */
+            height: 400px;       /* fixed height */
+            object-fit: cover;   /* crops to fill the box without stretching */
             border-radius: 20px;
             display: block;
-            margin: 0 auto;      
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* ADDED SHADOW TO MAIN IMAGE */
+            margin: 0 auto;      /* centers if max-width is set */
         }
     </style>
 </head>
